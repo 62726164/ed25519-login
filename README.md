@@ -42,8 +42,13 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 2022/02/06 17:15:41 signature: NRnVqh5o6dm4XB7KYVqSrEBHdDAMoOjC1+0a6Ht0D2YQk4KEfIJGg0Jmbibtz8Ag+e62i49IuIN2MYa/6ibACw==
 ```
 
+## Login Process
+
+  1. Upload your base64 encoded public Ed25519 key to the website.
+  2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time)
+  3. Paste that signature into the website's login form.
+
 ## Notes
 
   * Requires Go 1.16 or higher.
-  * Sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time) and paste that signature into the website's login form.
-  * A base64 encoded Ed25519 key looks like this *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
+  * A base64 encoded public Ed25519 key looks like this *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
