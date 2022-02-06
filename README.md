@@ -1,6 +1,6 @@
 # ed25519-login
 
-Login to websites using an Ed25519 key. A simple alternative to [webauthn](https://webauthn.guide/).
+Login to websites using a base64 encoded [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) key. A simple alternative to [webauthn](https://webauthn.guide/).
 
 # Advantages of this approach
 
