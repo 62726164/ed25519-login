@@ -2,6 +2,11 @@
 
 Login to websites using an Ed25519 key. A simple alternative to [https://webauthn.guide/](webauthn).
 
+# Advantages of this approach
+
+  * Much simpler than webauthn.
+  * The website only stores users' public Ed25519 keys.
+
 ## Build
 ```bash
 $ make
@@ -9,15 +14,18 @@ $ make
 
 ## Usage
 ```bash
+# Generate a keypair
 $ ./ed25519-login -gen -privkey /home/user/ed
 
 $ ls -alh /home/user/ed*
 -r-------- 1 user user 88 Feb  6 17:13 /home/user/ed
 -r-------- 1 user user 44 Feb  6 17:13 /home/user/ed.pub
 
+# Sign a message
 $ ./ed25519-login -sign -message hi -privkey /home/user/ed
 2022/02/06 17:14:08 signature: cdF4uV7L4ZupvpJfEHXC1QfjmKBGCUc/U72KRiPv3xfU1vneLFgHTpPECUjGITVuAcQwhrIGYNO3XtB+gtz+Cg==
 
+# Verify a signature
 $ ./ed25519-login -verify -signature cdF4uV7L4ZupvpJfEHXC1QfjmKBGCUc/U72KRiPv3xfU1vneLFgHTpPECUjGITVuAcQwhrIGYNO3XtB+gtz+Cg== -message hi -pubkey /home/user/ed.pub
 2022/02/06 17:15:04 Signature verified: true
 ```
