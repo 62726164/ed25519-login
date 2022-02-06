@@ -1,6 +1,6 @@
 # ed25519-login
 
-Login to websites using an Ed25519 key. A simple alternative to [https://webauthn.guide/](webauthn).
+Login to websites using an Ed25519 key. A simple alternative to [webauthn](https://webauthn.guide/).
 
 # Advantages of this approach
 
@@ -45,4 +45,4 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 ## Notes
 
   * Requires Go 1.16 or higher.
-  * Sign the current [https://en.wikipedia.org/wiki/Unix_time/](Unix epoch time) and paste that signature into the website's login form.
+  * Sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time) and paste that signature into the website's login form.
