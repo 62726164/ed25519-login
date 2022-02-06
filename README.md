@@ -2,6 +2,11 @@
 
 Login to websites using an Ed25519 key
 
+## Build
+```bash
+$ make
+```
+
 ## Usage
 ```bash
 $ ./ed25519-login -gen -privkey /home/user/ed
@@ -28,3 +33,7 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 $ ./ed25519-login -sign -privkey /home/user/ed
 2022/02/06 17:15:41 signature: NRnVqh5o6dm4XB7KYVqSrEBHdDAMoOjC1+0a6Ht0D2YQk4KEfIJGg0Jmbibtz8Ag+e62i49IuIN2MYa/6ibACw==
 ```
+
+## Notes
+
+  * Requires Go 1.16 or higher.
