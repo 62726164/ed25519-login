@@ -46,3 +46,4 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 
   * Requires Go 1.16 or higher.
   * Sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time) and paste that signature into the website's login form.
+  * A base64 encoded Ed25519 key looks like this *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
