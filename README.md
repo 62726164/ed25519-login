@@ -1,6 +1,6 @@
 # ed25519-login
 
-Login to websites using an Ed25519 key
+Login to websites using an Ed25519 key. A simple alternative to [https://webauthn.guide/](webauthn).
 
 ## Build
 ```bash
@@ -37,3 +37,4 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 ## Notes
 
   * Requires Go 1.16 or higher.
+  * Sign the current Unix epoch time and paste that signature into the website's login form.
