@@ -37,4 +37,4 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 ## Notes
 
   * Requires Go 1.16 or higher.
-  * Sign the current Unix epoch time and paste that signature into the website's login form.
+  * Sign the current [https://en.wikipedia.org/wiki/Unix_time](Unix epoch time) and paste that signature into the website's login form.
