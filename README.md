@@ -46,7 +46,7 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 
   1. [Register]() your base64 encoded public Ed25519 key with the website.
   2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time)
-  3. Paste that signature into the website's [login]() form.
+  3. Paste the base64 encoded signature into the website's [login]() form.
 
 ## Notes
 
