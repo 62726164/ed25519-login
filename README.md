@@ -44,11 +44,12 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 
 ## Login Process
 
-  1. Register your base64 encoded public Ed25519 key with the website.
+  1. [Register]() your base64 encoded public Ed25519 key with the website.
   2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time)
-  3. Paste that signature into the website's login form.
+  3. Paste that signature into the website's [login]() form.
 
 ## Notes
 
   * Requires Go 1.16 or higher.
   * A base64 encoded public Ed25519 key looks like this *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
+  * Client systems should use [NTP](https://www.ntp.org/) to ensure accurate time.
