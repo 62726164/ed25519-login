@@ -44,9 +44,9 @@ $ ./ed25519-login -sign -privkey /home/user/ed
 
 ## Login Process
 
-  1. [Register]() your base64 encoded public Ed25519 key with the website.
+  1. [Register](https://gen.go350.com/register) your base64 encoded public Ed25519 key with the website.
   2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time)
-  3. Paste the base64 encoded signature into the website's [login]() form.
+  3. Paste the base64 encoded signature into the website's [login](https://gen.go350.com/login) form.
 
 ## Notes
 
