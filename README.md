@@ -52,4 +52,5 @@ signature: NRnVqh5o6dm4XB7KYVqSrEBHdDAMoOjC1+0a6Ht0D2YQk4KEfIJGg0Jmbibtz8Ag+e62i
 
   * Requires Go 1.16 or higher.
   * A base64 encoded public Ed25519 key looks like this *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
+  * A base64 encoded Ed25519 signature looks like this *E3FCTm0qNSu6gl/6oKcf3VABO4u/WEpeKnDOaX+VJFeYmrAA1rF3I9VEN2sD1ogIiTN9F7xtf9Fhwz+jJMm1Cg==*
   * Client systems should use [NTP](https://www.ntp.org/) to ensure accurate time.
