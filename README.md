@@ -1,11 +1,17 @@
 # ed25519-login
 
-Login to websites using a base64 encoded [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) key. A simple alternative to [webauthn](https://webauthn.guide/).
+Login to websites using a base64 encoded [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) signature. A simple alternative to [webauthn](https://webauthn.guide/).
 
 # Advantages of this approach
 
   * Much simpler than webauthn.
-  * The website only stores users' public Ed25519 keys.
+  * Does not require passwords or password hashing.
+    * No passwords to brute-force or stuff.
+    * No password complexity rules.
+    * No password dumping and cracking.
+  * Ed25519 keys are controlled by the end users.
+    * Private keys never leave end users' devices.
+	* Websites store the users' public keys.
 
 ## Build
 ```bash
