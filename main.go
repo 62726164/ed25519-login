@@ -93,10 +93,10 @@ func main() {
 			seconds := now.Unix()
 			strSeconds := strconv.FormatInt(seconds, 10)
 			sig := ed25519.Sign(dprivkey, []byte(strSeconds))
-			log.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
+			fmt.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
 		} else {
 			sig := ed25519.Sign(dprivkey, []byte(*message))
-			log.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
+			fmt.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
 		}
 	}
 
@@ -119,6 +119,6 @@ func main() {
 		// verify the signature
 		verified := ed25519.Verify(dpubkey, []byte(*message), dsignature)
 
-		log.Printf("Signature verified: %t\n", verified)
+		fmt.Printf("signature verified: %t\n", verified)
 	}
 }
