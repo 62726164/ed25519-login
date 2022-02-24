@@ -87,16 +87,23 @@ func main() {
 			log.Fatalln(err)
 		}
 
+		b64pubkey, err := os.ReadFile(*privkeyfile + ".pub")
+		if err != nil {
+			log.Fatal(err)
+		}
+
 		// Sign the message
 		if *message == "" {
 			now := time.Now()
 			seconds := now.Unix()
 			strSeconds := strconv.FormatInt(seconds, 10)
 			sig := ed25519.Sign(dprivkey, []byte(strSeconds))
-			fmt.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
+			fmt.Printf("Public key: %s\n", string(b64pubkey))
+			fmt.Printf("Signature: %s\n", base64.StdEncoding.EncodeToString(sig))
 		} else {
 			sig := ed25519.Sign(dprivkey, []byte(*message))
-			fmt.Printf("signature: %s\n", base64.StdEncoding.EncodeToString(sig))
+			fmt.Printf("Public key: %s\n", string(b64pubkey))
+			fmt.Printf("Signature: %s\n", base64.StdEncoding.EncodeToString(sig))
 		}
 	}
 
