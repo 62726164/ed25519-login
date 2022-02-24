@@ -52,6 +52,8 @@ func main() {
 			log.Fatal(err)
 		}
 
+		fmt.Printf("Public key: %s\n", b64pubkey)
+
 		if *verbose {
 			// PEM Blocks
 			// https://pkg.go.dev/crypto/x509#MarshalPKCS8PrivateKey
