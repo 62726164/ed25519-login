@@ -18,9 +18,9 @@
         return times
     }
 
-	...
+    ...
 
-	now := time.Now()
+    now := time.Now()
     secs := now.Unix()
     times := toTimeRange(secs)
 
