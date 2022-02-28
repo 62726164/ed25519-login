@@ -56,7 +56,7 @@ signature: NRnVqh5o6dm4XB7KYVqSrEBHdDAMoOjC1+0a6Ht0D2YQk4KEfIJGg0Jmbibtz8Ag+e62i
 ## Login Process
 
   1. [Register](https://gen.go350.com/register) your base64 encoded public Ed25519 key with the website.
-  2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time)
+  2. Use your private Ed25519 key to sign the current [Unix Epoch Time](https://en.wikipedia.org/wiki/Unix_time) or the [cryptographic nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) provided by the website.
   3. Paste the base64 encoded signature into the website's [login](https://gen.go350.com/login) form.
 
 ## Notes
@@ -64,4 +64,4 @@ signature: NRnVqh5o6dm4XB7KYVqSrEBHdDAMoOjC1+0a6Ht0D2YQk4KEfIJGg0Jmbibtz8Ag+e62i
   * Requires Go 1.16 or higher.
   * A base64 encoded public Ed25519 key looks like this: *uv8AWTxoUzWJp2RDGczJXf/Z+Cq484+wEM602zjTLNM=*
   * A base64 encoded Ed25519 signature looks like this: *E3FCTm0qNSu6gl/6oKcf3VABO4u/WEpeKnDOaX+VJFeYmrAA1rF3I9VEN2sD1ogIiTN9F7xtf9Fhwz+jJMm1Cg==*
-  * Client systems should use [NTP](https://www.ntp.org/) to ensure accurate time.
+  * Client systems should use [NTP](https://www.ntp.org/) to ensure accurate time when websites require Unix Epoch time based signatures for login.
