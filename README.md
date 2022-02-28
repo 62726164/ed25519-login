@@ -13,6 +13,11 @@ Login to websites using a base64 encoded [Ed25519](https://en.wikipedia.org/wiki
     * Private keys never leave end users' devices.
 	* Websites store the users' public keys.
 
+## Disadvantages
+
+  1. If multiple websites required Unix epoch time signatures for login and a user used the same Ed25519 keypair for those sites, then a signature would be valid on all the websites.
+  2. This approach is phishable.
+
 ## Build
 ```bash
 $ make
